@@ -1,0 +1,62 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.8.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+      "node": "8.6.0",
+      "npm": "5.3.0"
+    },
+    "scripts": {
+      "start": "node index.js",
+      "server": "nodemon index.js",
+      "client": "npm run start --prefix client",
+      "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "concurrently": "^3.5.1",
+      "cookie-session": "^2.0.0-beta.3",
+      "express": "^4.16.3",
+      "mongoose": "^5.0.12",
+      "nodemon": "^1.17.2",
+      "passport": "^0.4.0",
+      "passport-google-oauth20": "^1.0.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Found incompatible module
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at Object.checkOne (/usr/local/lib/node_modules/yarn/lib/cli.js:62444:11)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:22773:75
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/lib/node_modules/yarn/lib/cli.js:23451:28)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:95:12
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:22777:27
