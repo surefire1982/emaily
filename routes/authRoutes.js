@@ -14,8 +14,7 @@ module.exports = app => {
 
   app.get('/api/logout', (req, res) => {
     req.logout()
-    // should be empty
-    res.send(req.user)
+    res.redirect('/')
   })
 
   // get current user
